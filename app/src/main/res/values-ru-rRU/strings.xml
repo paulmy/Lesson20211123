@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Органайзер</string>
+    <string name="btn_1">Нажми меня</string>
+    <string name="texthello">Привет</string>
+    <string name="btnhello">Кнопка привет</string>
+    <string name="mypaint">Рисовать</string>
+    <string name="countryflag">Флаг</string>
+    <string name="white">Белый</string>
+    <string name="blue">Синий</string>
+    <string name="red">Красный</string>
+    <string name="inputtext">Введите текст</string>
+</resources>

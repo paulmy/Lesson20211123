@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="texthello">Hello</string>
+    <string name="btnhello">Hello button</string>
+    <string name="mypaint">Go Paint</string>
+    <string name="countryflag">Flag</string>
+</resources>

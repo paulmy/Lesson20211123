@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Application</string>
+    <string name="btn_1">Click me</string>
+    <string name="texthello">Hello</string>
+    <string name="btnhello">Hello button</string>
+    <string name="mypaint">Go Paint</string>
+    <string name="countryflag">Flag</string>
+    <string name="white">White</string>
+    <string name="blue">Blue</string>
+    <string name="red">Red</string>
+</resources>

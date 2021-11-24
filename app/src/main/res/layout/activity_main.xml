@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:id="@+id/liarLayout"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/texthello"
+        android:textAlignment="center"
+        android:textColor="@color/my_Blue"
+        android:textSize="50sp"
+
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnhello"
+        android:text="@string/btnhello"
+        android:textSize="50sp"
+
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goPaint"
+        android:textSize="50sp"
+        android:text="@string/mypaint" />
+    <Button
+        android:id="@+id/btnflag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:text="@string/countryflag" />
+    <Button
+        android:id="@+id/btnexit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:text="@string/exit" />
+
+</LinearLayout>
