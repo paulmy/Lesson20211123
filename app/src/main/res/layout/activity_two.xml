@@ -15,11 +15,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="click" />
-    <TextView
+
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv"
-        android:text="Временный текст"/>
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Временный текст" />
+
+    </androidx.core.widget.NestedScrollView>
 
 
 </LinearLayout>

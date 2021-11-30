@@ -10,9 +10,13 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+
 import ru.myitschool.lesson20211123.Animal.Animal;
 import ru.myitschool.lesson20211123.Animal.Bird;
+import ru.myitschool.lesson20211123.Animal.Dog;
 import ru.myitschool.lesson20211123.Animal.Fish;
+import ru.myitschool.lesson20211123.Animal.Life;
 
 public class TwoActivity extends AppCompatActivity implements View.OnClickListener {
     Button btnclick;
@@ -21,7 +25,9 @@ public class TwoActivity extends AppCompatActivity implements View.OnClickListen
     Point point;
     Point3D point3D, point3D2;
     Point4D point4D;
-    Animal[] animals = new Animal[10];
+    int count = 0;
+    //Animal[] animals = new Animal[10];
+    ArrayList<Animal> animalArrayList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +40,12 @@ public class TwoActivity extends AppCompatActivity implements View.OnClickListen
         btnclick.setOnClickListener(this);
         point = new Point(5, 10);
         point3D = new Point3D(1, -1, 5);
-        for (int i = 0; i < animals.length; i++) {
+        /*for (int i = 0; i < animals.length; i++) {
             if (i % 2 == 0)
                 animals[i] = new Bird();
             else
                 animals[i] = new Fish();
-        }
+        }*/
 
 
     }
@@ -48,6 +54,20 @@ public class TwoActivity extends AppCompatActivity implements View.OnClickListen
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnclick: {
+                String name = editText.getText().toString();
+                if (name.isEmpty()) {
+                    Toast.makeText(getApplicationContext(),
+                            "Введена пустая строка", Toast.LENGTH_SHORT).show();
+                }
+                if (count % 3 == 0) {
+                    animalArrayList.add(new Bird(name));
+                } else if (count % 3 == 1) {
+                    animalArrayList.add(new Fish(name));
+                } else {
+                    animalArrayList.add(new Dog(name, (int) (Math.random() * 50)));
+                }
+                count++;
+/*
 
                 String name = editText.getText().toString();
                 if (name.isEmpty()) {
@@ -74,13 +94,17 @@ public class TwoActivity extends AppCompatActivity implements View.OnClickListen
                             + point3D.PrintPoint() + "\nPoint4D "
                             + point4D.PrintPoint() + "\n");
                     for (int i = 0; i < animals.length; i++) {
-                        tv.append(animals[i].Say()+"\n");
+                        tv.append(animals[i].Say() + "\n");
                     }
-
-
-                    editText.setText("");
+*/
+                tv.setText("");
+                for (Animal a : animalArrayList) {
+                    tv.append(a.voice() + "\n");
                 }
+
+                editText.setText("");
             }
         }
     }
 }
+
